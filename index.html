@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Weather</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1 id="title">Your Local Weather</h1>
+
+<div class="container" id="cont">
+
+    <div id="inner_cont">
+        <div class="loading">
+            <div id="load_txt"><h3>Getting your data...</h3></div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="inner">
+
+        <p>View the source code on <a target="_blank"
+                                      href="https://github.com/Clarity-89/Local_Weather">GitHub</a>.</p>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+<script id="weather_display" type="text/x-handlebars-template">
+
+    {{city}}, {{country}} <br> <img src="{{image}}"> <br> <span id="temp">{{temperatureC}}&deg;C ({{temperatureF}}&deg;F)</span><br>
+    {{clouds}}
+    <br> {{wind}}
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="weather.js"></script>
+</body>
+</html>
